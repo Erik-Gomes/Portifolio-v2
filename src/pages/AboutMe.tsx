@@ -1,7 +1,6 @@
 // src/pages/AboutMe.tsx
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
-import ilustracao from '../assets/ilustracao.svg';
 
 export default function AboutMe() {
     const { t } = useLanguage();
