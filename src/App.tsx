@@ -16,7 +16,7 @@ function Home() {
 
 function App() {
   return (
-    <Router>
+    <Router basename='/'>
       <div className="min-h-screen bg-[#eef5fd]">
         <Navbar />
         <Routes>
