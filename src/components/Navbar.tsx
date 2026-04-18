@@ -16,16 +16,16 @@ export default function Navbar() {
     ];
 
     return (
-        <nav className="fixed top-0 w-full bg-[#62C0DE] h-16 flex items-center justify-between px-8 z-50 shadow-md">
-            {/* Nome/Logo */}
+        <nav className="fixed top-0 w-full bg-[#62C0DE] h-16 flex items-center justify-end px-8 z-50 shadow-md">
+            {/* Nome/Logo 
             <div className="flex items-center">
                 <h2 className="font-bold text-[#EAF4FF] text-xl tracking-tight">
                     Erik Gomes
                 </h2>
             </div>
-
+                */}
             {/* Menu Desktop */}
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-8  ">
                 {navLinks.map((link) => (
                     <Link
                         key={link.href}

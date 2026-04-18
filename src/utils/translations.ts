@@ -25,7 +25,7 @@ export const translations = {
             greeting: 'Olá, eu sou',
             role: 'Estudante de ADS & Desenvolvedor de Sistemas',
             description:
-                'Atualmente no 3º semestre de Análise e Desenvolvimento de Sistemas na Fatec Indaiatuba. Minha jornada começou com Arduino e C++, e hoje foco em construir aplicações modernas com Java (Spring Boot) e React.',
+                'Atualmente no 5º semestre de Análise e Desenvolvimento de Sistemas na Fatec Indaiatuba. Minha jornada começou com Arduino e C++, e hoje foco em construir aplicações modernas com Java (Spring Boot) e React.',
             btnCerts: 'Ver Certificados',
             btnGithub: 'GitHub',
         },
@@ -50,7 +50,7 @@ export const translations = {
             greeting: 'Hello, I am',
             role: 'Software Development Student & Developer',
             description:
-                'Currently in my 3rd semester of Systems Analysis and Development at Fatec Indaiatuba. My journey started with Arduino and C++, and today I focus on building modern applications with Java (Spring Boot) and React.',
+                'Currently in my 5rd semester of Systems Analysis and Development at Fatec Indaiatuba. My journey started with Arduino and C++, and today I focus on building modern applications with Java (Spring Boot) and React.',
             btnCerts: 'View Certificates',
             btnGithub: 'GitHub',
         },
