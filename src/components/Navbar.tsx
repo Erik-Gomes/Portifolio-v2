@@ -7,34 +7,55 @@ export default function Navbar() {
     const { t, language, toggleLanguage } = useLanguage();
     const location = useLocation();
 
-    const isHome = location.pathname === '/';
+    const ShowBackBttn = location.pathname !== '/';
     const navLinks = [
-    //{ href: isHome ? "#" : "/", label: t.nav.home },
-    { href: "/sobre", label: t.nav.about },
-    { href: isHome ? "#certifications" : "/#certifications", label: t.nav.certs },
-    { href: isHome ? "#game" : "/#game", label: t.nav.game },
+        //{ href: isHome ? "#" : "/", label: t.nav.home },
+        { href: '/sobre', label: t.nav.about },
+        { href: '/certifications', label: t.nav.certs },
+        { href: '/projects', label: t.nav.projects },
     ];
 
     return (
-        <nav className="fixed top-0 w-full bg-[#62C0DE] h-16 flex items-center justify-end px-8 z-50 shadow-md">
-            {/* Nome/Logo 
+        <nav className="fixed top-0 w-full bg-[#62C0DE] h-16 flex items-center justify-between px-8 z-50 shadow-md">
             <div className="flex items-center">
-                <h2 className="font-bold text-[#EAF4FF] text-xl tracking-tight">
-                    Erik Gomes
-                </h2>
-            </div>
-                */}
-            {/* Menu Desktop */}
-            <div className="hidden md:flex items-center gap-8  ">
-                {navLinks.map((link) => (
+                {/* Renderiza a seta de voltar SOMENTE se estiver na página Sobre Mim */}
+                {ShowBackBttn && (
                     <Link
-                        key={link.href}
-                        to={link.href}
-                        className="text-[#EAF4FF] font-semibold hover:text-[#053546] transition-colors duration-300"
+                        to="/"
+                        className="mr-4 text-[#053546] bg-[#EAF4FF] p-1.5 rounded-full hover:bg-white transition-all shadow-sm hover:shadow-md flex items-center justify-center transform hover:-translate-x-1"
+                        title="Voltar para o Início"
                     >
-                        {link.label}
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            strokeWidth={2.5}
+                            stroke="currentColor"
+                            className="w-5 h-5"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+                            />
+                        </svg>
                     </Link>
-                ))}
+                )}
+            </div>
+            <div className="hidden md:flex items-center gap-8  ">
+                {navLinks.map((link) => {
+                    const isActive = location.pathname === link.href;
+                    console.log(location.pathname, link.href, isActive);
+                    return (
+                        <Link
+                            key={link.href}
+                            to={link.href}
+                            className={`font-semibold hover:text-[#053546] transition-colors duration-300 ${isActive ? 'text-[#053546]' : 'text-[#EAF4FF] '}`}
+                        >
+                            {link.label}
+                        </Link>
+                    );
+                })}
 
                 {/* Botão de Troca de Idioma (Desktop) */}
                 <button
