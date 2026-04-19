@@ -50,7 +50,7 @@ export default function Navbar() {
                         <Link
                             key={link.href}
                             to={link.href}
-                            className={`font-semibold hover:text-[#053546] transition-colors duration-300 ${isActive ? 'text-[#053546]' : 'text-[#EAF4FF] '}`}
+                            className={`font-semibold hover:text-[#053546] transition-colors duration-300 ${isActive ? 'text-[#053546]' : 'text-[#EAF4FF]'}`}
                         >
                             {link.label}
                         </Link>
@@ -102,16 +102,19 @@ export default function Navbar() {
             {/* Menu Mobile (Dropdown) */}
             {isOpen && (
                 <div className="absolute top-16 left-0 w-full bg-[#62C0DE] flex flex-col items-center py-8 gap-6 md:hidden shadow-xl border-t border-[#EAF4FF]/10 animate-in fade-in slide-in-from-top-4">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            to={link.href}
-                            onClick={() => setIsOpen(false)}
-                            className="text-[#EAF4FF] font-bold text-lg hover:text-[#053546]"
+                    {navLinks.map((link) => {
+                        const isActive = location.pathname === link.href;
+                        return (
+                            <Link
+                                key={link.href}
+                                to={link.href}
+                                onClick={() => setIsOpen(false)}
+                                className={`font-bold text-lg hover:text-[#053546] ${isActive ? 'text-[#053546]' : 'text-[#EAF4FF]'}`}
                         >
                             {link.label}
                         </Link>
-                    ))}
+                        );
+                    })}
 
                     <div className="h-px w-2/3 bg-[#EAF4FF]/20 my-2" />
 

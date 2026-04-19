@@ -24,10 +24,10 @@ export default function Hero() {
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
                     <a
-                        href="#certifications"
+                        href="/projects"
                         className="px-8 py-3 bg-[#005F7E] text-[#EAF4FF] rounded-xl font-bold hover:bg-[#053546] transition-all shadow-lg hover:shadow-xl text-center"
                     >
-                        {t.hero.btnCerts}
+                        {t.hero.btnProjects}
                     </a>
                     <a
                         href="https://github.com/Erik-Gomes"
