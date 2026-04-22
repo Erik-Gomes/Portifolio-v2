@@ -11,8 +11,8 @@ export default function Navbar() {
     const navLinks = [
         //{ href: isHome ? "#" : "/", label: t.nav.home },
         { href: '/sobre', label: t.nav.about },
-        { href: '/certifications', label: t.nav.certs },
         { href: '/projects', label: t.nav.projects },
+        { href: '/certifications', label: t.nav.certs },
     ];
 
     return (
