@@ -20,7 +20,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         setLanguage((prev) => (prev === 'pt' ? 'en' : 'pt'));
     };
 
-    const t = translations[language];
+    const t = translations[language] as typeof translations.pt;
 
     return (
         <LanguageContext.Provider value={{ language, toggleLanguage, t }}>
